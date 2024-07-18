@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+    --primary-color: #fff;
+    --secondary-color: #f2c025;
+    --default-color: #333;
+    --box-shadow: rgba(245, 245, 245, 0.11) 0px 20px 25px -5px, rgba(245, 245, 245, 0.11) 0px 10px 10px -5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background: linear-gradient(270deg, rgba(26,82,118,1) 22%, rgba(84,153,199,0.9) 100%) !important;
+}

@@ -1,0 +1,45 @@
+.box {
+
+    .filter-container {
+        label {
+            color: var(--primary-color);
+        }
+
+        select {
+            width: 10rem;
+            background-color: transparent;
+            color: var(--primary-color);
+
+            &:focus {
+                border-color: var(--secondary-color);
+                box-shadow: 0 0 5px 5px rgba(242, 191, 37, 0.207);
+            }
+
+            option {
+                padding: 15px !important;
+                background-color: #3b759c;
+            }
+    
+        }
+    }
+}
+
+table {
+
+    &.table-striped {
+
+        td,
+        th {
+            background-color: transparent !important;
+            color: var(--primary-color);
+            padding: 1.5rem;
+            text-align: center;
+            vertical-align: middle;
+            border-color: var(--secondary-color);
+        }
+
+        thead th {
+            font-size: 1.2rem;
+        }
+    }
+}

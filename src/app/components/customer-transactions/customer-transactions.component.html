@@ -1,0 +1,32 @@
+<section class="box">
+    <div class="container">
+        <button class="btn btn-outline-light mb-3" routerLink="/customers">Back</button>
+        <div class="table-responsive-md">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Transaction ID</th>
+                        <th scope="col">Customer ID</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let transaction of customerTransactions; trackBy: trackByTrans">
+                        <tr>
+                            <th scope="row">{{transaction.id}}</th>
+                            <td>{{transaction.customer_id}}</td>
+                            <td>{{transaction.amount}}</td>
+                            <td>{{transaction.date}}</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container chart mt-5">
+        <canvas id="canvas">{{chart}}</canvas>
+    </div>
+
+</section>

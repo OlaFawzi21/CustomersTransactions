@@ -1,0 +1,29 @@
+.box {
+    table {
+
+        &.table-striped {
+
+            td,
+            th {
+                background-color: transparent !important;
+                color: var(--primary-color);
+                padding: 1.5rem;
+                text-align: center;
+                vertical-align: middle;
+                border-color: var(--secondary-color);
+            }
+
+            thead th {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .chart {
+        width: 70%;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    }
+}

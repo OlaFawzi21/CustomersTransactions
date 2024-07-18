@@ -1,0 +1,30 @@
+<section class="box">
+    <div class="container">
+        <div class="table-responsive-md">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">NO. Transactions</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let customer of customers; trackBy: trackByCustomer">
+                        <tr>
+                            <th scope="row">{{customer.id}}</th>
+                            <td>{{customer.name}}</td>
+                            <td>{{customer.no_transactions}}</td>
+                            <td class="p-0">
+                                <button class="btn-view rounded-4 p-3"
+                                    routerLink="/customerTransactions/{{customer.id}}">
+                                    View Transactions</button>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

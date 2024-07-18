@@ -1,0 +1,49 @@
+<section class="box">
+    <div class="container">
+        <button class="btn btn-outline-light mb-3" routerLink="/customers">Back</button>
+        <div class="filter-container d-flex flex-md-row flex-column justify-content-center gap-md-5 gap-3 mb-4">
+            <div class="filter-select d-flex align-items-center gap-2">
+                <label>Filter by Name:</label>
+                <select class="form-select form-select-sm" [(ngModel)]="searchItemName" (ngModelChange)="applyFilter()">
+                    <option value="">All</option>
+                    <option *ngFor="let customer of customers" [value]="customer.name">{{ customer.name }}</option>
+                </select>
+            </div>
+
+            <div class="filter-select d-flex align-items-center gap-2">
+                <label>Filter by Amount:</label>
+                <select class="form-select form-select-sm" [(ngModel)]="searchItemAmount" (ngModelChange)="applyFilter()">
+                    <option value="">All</option>
+                    <option *ngFor="let transaction of transactions" [value]="transaction.amount">
+                        {{ transaction.amount}}</option>
+                </select>
+            </div>
+        </div>
+
+
+
+
+        <div class="table-responsive-md">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Transaction ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let trans of filteredTransactions; trackBy: trackByTrans">
+                        <tr>
+                            <th scope="row">{{trans.id}}</th>
+                            <td>{{trans.name}}</td>
+                            <td>{{trans.amount}}</td>
+                            <td>{{trans.date}}</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+.box {
+
+    input[type='search'] {
+        background-color: var(--primary-color);
+        color: var(--default-color);
+    }
+
+    .btn-view {
+        width: 10.5rem;
+        background-color: transparent;
+        color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+        transition: background-color 0.4s;
+
+        &:hover {
+            background-color: var(--secondary-color) !important;
+            color: var(--default-color) !important;
+            border: 1px solid var(--secondary-color) !important;
+        }
+    }
+
+    table {
+
+        &.table-striped {
+
+            td,
+            th {
+                background-color: transparent !important;
+                color: var(--primary-color);
+                padding: 1.5rem;
+                text-align: center;
+                vertical-align: middle;
+                border-color: var(--secondary-color);
+            }
+
+            thead th {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
